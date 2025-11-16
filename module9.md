@@ -13,11 +13,26 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+char stack[100];
+int top,i;
+void display()
+{
+    for(i=top;i>=0;i--)
+    {
+        printf("%c ",stack[i]);
+    }
+    if(top ==-1)
+    {
+        printf("stack is empty\n");
+    }
+}
+```
 
 Output:
 
-//paste your output here
+<img width="380" height="372" alt="image" src="https://github.com/user-attachments/assets/2f472d31-1232-459c-900d-78b97b2a5f1b" />
+
 
 
 
@@ -36,11 +51,20 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+int size=3,top=-1,stack[100];
+void push (int data)
+{
+    stack[++top]=data;
+}
+```
+
+
 
 Output:
 
-//paste your output here
+<img width="627" height="522" alt="image" src="https://github.com/user-attachments/assets/a2409bc2-7adb-4401-a8c5-e23fc0a1dd0a" />
+
 
 
 
@@ -62,11 +86,31 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+float queue[50];
+int front,rear;
+void display()
+{
+    if(front==-1 && rear==-1)
+    {
+        printf("No elements to display\n");
+    }
+    else
+    {
+        for(int i=front;i<=rear;i++)
+        {
+            printf("%.1f\n",queue[i]);
+        }
+    }
+    
+}
+```
+
 
 Output:
 
-//paste your output here
+<img width="611" height="382" alt="image" src="https://github.com/user-attachments/assets/e41d0dec-7065-47de-a5cf-1199c3cf8d50" />
+
 
 
 Result:
@@ -86,11 +130,25 @@ Algorithm:
 
 Program:
 
-//type your code here
+```
+int front;
+int rear;
+char queue[50];
+void enqueue(char data)
+{
+    if(front==-1)
+    {
+        front=0;
+    }
+    rear++;
+    queue[rear]=data;
+}
+```
 
 Output:
 
-//paste your output here
+<img width="610" height="330" alt="image" src="https://github.com/user-attachments/assets/4fcc7433-747d-4772-9929-2a9088205b12" />
+
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -121,11 +179,31 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 Program:
 
-//type your code here
+```
+float queue[50];
+int front, rear;
+void dequeue()
+{
+    if(front==-1 && rear==-1){
+        printf("Queue Underflow.\n");
+    }
+    else if(front<rear)
+    {
+        front++;
+    }
+    else
+    {
+        front=-1;
+        rear=-1;
+        printf("No elements to display");
+    }
+}
+```
 
 Output:
 
-//paste your output here
+<img width="647" height="445" alt="image" src="https://github.com/user-attachments/assets/65a41af4-8f3f-4cae-ba82-82e74e095340" />
+
 
 
 Result:
